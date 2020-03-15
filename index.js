@@ -1,17 +1,9 @@
-const exec = require("child_process").exec;
 const settings = require("./settings.json");
+const isRunning = require("./isRunning")();
+const closeApp = require("./close")();
 
-function closeApp() {
-  for (app of settings.apps) {
-    terminateApp(app);
-  }
-}
-
-function terminateApp(app) {
-  const command = `osascript -e 'quit app "${app}"'`;
-  exec(command);
-}
-
-closeApp();
+const openApps = settings.apps.filter(isRunning);
+openApps.forEach(closeApp);
+console.log("Closed apps:", openApps.join(", "));
 
 process.exit();

@@ -1,12 +1,11 @@
 {
   "name": "focus",
   "version": "1.0.0",
-  "description": "",
+  "description": "Command line utility which close all the distraction to allow you to focus on one task",
+  "author": "Guillaume Lodi",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Guillaume Lodi",
-  "description": "Command line utility which close all the distraction to allow you to focus on one task",
-  "license": "ISC"
+  }
 }
